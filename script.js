@@ -1,19 +1,38 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const loginBtn = document.querySelector("button");
+// Grand Total Calculation
 
-    loginBtn.addEventListener("click", () => {
-        const username = document.querySelector('input[type="text"]').value.trim();
-        const password = document.querySelector('input[type="password"]').value.trim();
+const opening = document.getElementById("opening");
+const sales = document.getElementById("sales");
+const expenses = document.getElementById("expenses");
+const grandTotal = document.getElementById("grandTotal");
+const saveBtn = document.getElementById("saveBtn");
 
-        if (username === "" || password === "") {
-            alert("Please enter Username and Password.");
-            return;
-        }
+function updateTotal() {
+    const open = Number(opening.value) || 0;
+    const sale = Number(sales.value) || 0;
+    const expense = Number(expenses.value) || 0;
 
-        // Temporary Login
-        alert("Login Successful!");
+    const total = open + sale - expense;
 
-        // بعد میں یہاں Firebase Login آئے گا
-        window.location.href = "dashboard.html";
-    });
+    grandTotal.innerText = "Rs. " + total.toLocaleString();
+}
+
+opening.addEventListener("input", updateTotal);
+sales.addEventListener("input", updateTotal);
+expenses.addEventListener("input", updateTotal);
+
+// Save Record
+saveBtn.addEventListener("click", () => {
+
+    const record = {
+        date: new Date().toLocaleDateString(),
+        opening: opening.value,
+        sales: sales.value,
+        expenses: expenses.value,
+        total: grandTotal.innerText
+    };
+
+    localStorage.setItem("todayRecord", JSON.stringify(record));
+
+    alert("Record Saved Successfully ✅");
+
 });
