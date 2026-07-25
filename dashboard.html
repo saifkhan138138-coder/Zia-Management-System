@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zia Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+    <h2>ZIA</h2>
+
+    <a href="#">🏠 Dashboard</a>
+    <a href="#">👨 Attendance</a>
+    <a href="#">💰 Sales</a>
+    <a href="#">💸 Expenses</a>
+    <a href="#">📦 Inventory</a>
+    <a href="#">👤 Customers Due</a>
+    <a href="#">📊 Reports</a>
+    <a href="#">⚙️ Settings</a>
+
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <h1>Zia Management Dashboard</h1>
+
+    <div class="card">
+        <label>Opening Balance</label>
+        <input type="number" id="opening" placeholder="Enter Opening Balance">
+    </div>
+
+    <div class="card">
+        <label>Today's Sales</label>
+        <input type="number" id="sales" placeholder="Enter Today's Sales">
+    </div>
+
+    <div class="card">
+        <label>Today's Expenses</label>
+        <input type="number" id="expenses" placeholder="Enter Today's Expenses">
+    </div>
+
+    <div class="card total">
+        <h2>Grand Total</h2>
+        <h1 id="grandTotal">Rs. 0</h1>
+    </div>
+
+    <button id="saveBtn">💾 Save Record</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
