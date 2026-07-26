@@ -49,3 +49,39 @@ cursor:pointer;
 button:hover{
 background:#095f2d;
   }
+.dashboard{
+    width:95%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+.dashboard h1{
+    text-align:center;
+    color:#0b7a3b;
+    margin-bottom:25px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#0b7a3b;
+    margin-bottom:10px;
+}
