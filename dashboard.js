@@ -1,22 +1,26 @@
-function saveRecord() {
+function saveRecord(){
 
-    const today = new Date().toLocaleDateString();
+let sale = Number(document.getElementById("sale").value) || 0;
+let due = Number(document.getElementById("due").value) || 0;
+let food = Number(document.getElementById("food").value) || 0;
+let maintenance = Number(document.getElementById("maintenance").value) || 0;
+let fuel = Number(document.getElementById("fuel").value) || 0;
+let cash = Number(document.getElementById("cash").value) || 0;
 
-    localStorage.setItem("zmsRecord", today);
+let expense = food + maintenance + fuel;
 
-    document.getElementById("savedRecord").innerHTML =
-        "Last Saved Record: " + today;
+document.getElementById("saleCard").innerHTML = "Rs. " + sale;
+document.getElementById("expenseCard").innerHTML = "Rs. " + expense;
+document.getElementById("cashCard").innerHTML = "Rs. " + cash;
 
-    alert("Record Saved Successfully!");
+let customer = document.getElementById("customer").value;
+
+if(customer.trim() !== ""){
+    document.getElementById("customerCard").innerHTML = "1";
+}else{
+    document.getElementById("customerCard").innerHTML = "0";
 }
 
-window.onload = function () {
-
-    let record = localStorage.getItem("zmsRecord");
-
-    if(record){
-        document.getElementById("savedRecord").innerHTML =
-            "Last Saved Record: " + record;
-    }
+alert("Record Saved Successfully!");
 
 }
