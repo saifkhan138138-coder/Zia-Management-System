@@ -10,31 +10,70 @@
 
 <div class="dashboard">
 
-    <h1>Zia Management System</h1>
+<h1>Zia Management System</h1>
 
-    <div class="cards">
+<h2>Daily Management Sheet</h2>
 
-        <div class="card" onclick="location.href='sales.html'">
-            <h2>🛒 Sales</h2>
-            <p>Manage Sales</p>
-        </div>
+<label>Date</label>
+<input type="date">
 
-        <div class="card" onclick="location.href='stock.html'">
-            <h2>📦 Stock</h2>
-            <p>Manage Stock</p>
-        </div>
+<h3>Staff Attendance</h3>
 
-        <div class="card" onclick="location.href='customers.html'">
-            <h2>👥 Customers</h2>
-            <p>Manage Customers</p>
-        </div>
+<table border="1" width="100%">
+<tr>
+<th>Name</th>
+<th>Time In</th>
+<th>Time Out</th>
+</tr>
 
-        <div class="card" onclick="location.href='reports.html'">
-            <h2>📊 Reports</h2>
-            <p>View Reports</p>
-        </div>
+<tr>
+<td><input type="text"></td>
+<td><input type="time"></td>
+<td><input type="time"></td>
+</tr>
 
-    </div>
+<tr>
+<td><input type="text"></td>
+<td><input type="time"></td>
+<td><input type="time"></td>
+</tr>
+
+<tr>
+<td><input type="text"></td>
+<td><input type="time"></td>
+<td><input type="time"></td>
+</tr>
+
+</table>
+
+<br>
+
+<h3>Customer Due</h3>
+
+<input type="text" placeholder="Customer Name">
+<input type="number" placeholder="Due Amount">
+
+<h3>Daily Expenses</h3>
+
+<input type="number" placeholder="Food Expense">
+<input type="number" placeholder="Maintenance">
+<input type="number" placeholder="Fuel">
+<input type="number" placeholder="Rent">
+<input type="number" placeholder="Staff Salary">
+<input type="number" placeholder="Electricity Bill">
+
+<h3>Inventory Details</h3>
+
+<input type="number" placeholder="Starting Cash">
+<input type="number" placeholder="Cash Receiving">
+<input type="number" placeholder="Total Pieces">
+<input type="number" placeholder="Return Pieces">
+<input type="number" placeholder="Sold Pieces">
+<input type="number" placeholder="Cash in Hand">
+
+<br><br>
+
+<button>Save Record</button>
 
 </div>
 
