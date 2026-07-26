@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZMS Records</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<h2>ZMS</h2>
+<p>Zia Management System</p>
+</div>
+
+<ul class="menu">
+
+<li onclick="location.href='dashboard.html'">🏠 Dashboard</li>
+<li class="active">📋 Records</li>
+<li>👨‍💼 Attendance</li>
+<li>💰 Daily Sales</li>
+<li>📦 Inventory</li>
+<li>👥 Customers</li>
+<li>💸 Expenses</li>
+<li>📊 Reports</li>
+<li>⚙️ Settings</li>
+<li onclick="location.href='index.html'">🚪 Logout</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Daily Records</h1>
+
+<div class="admin">
+Administrator
+</div>
+
+</div>
+
+<div class="content">
+
+<h2>Search Record</h2>
+
+<div class="entry-form">
+
+<div class="form-group">
+
+<label>Select Date</label>
+
+<input type="date" id="searchDate">
+
+</div>
+
+<div class="form-group">
+
+<label>Customer Name</label>
+
+<input type="text" id="searchCustomer" placeholder="Customer Name">
+
+</div>
+
+<div class="full-width">
+
+<button class="save-btn" onclick="searchRecord()">
+🔍 Search
+</button>
+
+<button class="clear-btn" onclick="loadRecords()">
+📋 Show All
+</button>
+
+</div>
+
+</div>
+
+<h2 class="heading">Saved Records</h2>
+
+<table class="summary-table">
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Customer</th>
+
+<th>Sale</th>
+
+<th>Expense</th>
+
+<th>Cash</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recordsTable">
