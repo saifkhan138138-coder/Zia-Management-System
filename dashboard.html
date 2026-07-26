@@ -9,77 +9,39 @@
  <script src="dashboard.js"></script>   
 <body>
 
-<div class="dashboard">
+<div class="sidebar">
 
+<h2>ZMS</h2>
+
+<ul>
+<li>🏠 Dashboard</li>
+<li>👨‍💼 Attendance</li>
+<li>💰 Daily Sales</li>
+<li>👥 Customers</li>
+<li>💸 Expenses</li>
+<li>📦 Inventory</li>
+<li>📊 Reports</li>
+<li>⚙️ Settings</li>
+<li>🚪 Logout</li>
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
 <h1>Zia Management System</h1>
+<p>Daily Management Dashboard</p>
+</div>
 
-<h2>Daily Management Sheet</h2>
+<div class="content">
 
-<label>Date</label>
-<input type="date">
+<h2>Welcome Admin 👋</h2>
 
-<h3>Staff Attendance</h3>
+<p>Select a menu from the left to start working.</p>
 
-<table border="1" width="100%">
-<tr>
-<th>Name</th>
-<th>Time In</th>
-<th>Time Out</th>
-</tr>
+</div>
 
-<tr>
-<td><input type="text"></td>
-<td><input type="time"></td>
-<td><input type="time"></td>
-</tr>
-
-<tr>
-<td><input type="text"></td>
-<td><input type="time"></td>
-<td><input type="time"></td>
-</tr>
-
-<tr>
-<td><input type="text"></td>
-<td><input type="time"></td>
-<td><input type="time"></td>
-</tr>
-
-</table>
-
-<br>
-
-<h3>Customer Due</h3>
-
-<input type="text" placeholder="Customer Name">
-<input type="number" placeholder="Due Amount">
-
-<h3>Daily Expenses</h3>
-
-<input type="number" placeholder="Food Expense">
-<input type="number" placeholder="Maintenance">
-<input type="number" placeholder="Fuel">
-<input type="number" placeholder="Rent">
-<input type="number" placeholder="Staff Salary">
-<input type="number" placeholder="Electricity Bill">
-
-<h3>Inventory Details</h3>
-
-<input type="number" placeholder="Starting Cash">
-<input type="number" placeholder="Cash Receiving">
-<input type="number" placeholder="Total Pieces">
-<input type="number" placeholder="Return Pieces">
-<input type="number" placeholder="Sold Pieces">
-<input type="number" placeholder="Cash in Hand">
-
-<br><br>
-
-<button onclick="saveRecord()">Save Record</button>
-<hr>
-
-<h3>Saved Record</h3>
-
-<p id="savedRecord">No Record</p>
 </div>
 
 </body>
