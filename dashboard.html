@@ -137,3 +137,87 @@ Administrator
 <label>Staff Salary</label>
 <input type="number" id="salary">
 </div>
+<div class="form-group">
+<label>Shop Rent</label>
+<input type="number" id="rent">
+</div>
+
+<div class="form-group">
+<label>Other Expense</label>
+<input type="number" id="other">
+</div>
+
+<div class="form-group">
+<label>Cash In Hand</label>
+<input type="number" id="cash">
+</div>
+
+<div class="form-group">
+<label>Opening Cash</label>
+<input type="number" id="openingCash">
+</div>
+
+<div class="form-group">
+<label>Total Pieces</label>
+<input type="number" id="totalPieces">
+</div>
+
+<div class="form-group">
+<label>Sold Pieces</label>
+<input type="number" id="soldPieces">
+</div>
+
+<div class="form-group">
+<label>Return Pieces</label>
+<input type="number" id="returnPieces">
+</div>
+
+<div class="form-group">
+<label>Closing By</label>
+<input type="text" id="closingBy">
+</div>
+
+<div class="full-width">
+
+<button onclick="saveRecord()" class="save-btn">
+💾 Save Daily Record
+</button>
+
+<button onclick="clearForm()" class="clear-btn">
+🗑 Clear Form
+</button>
+
+</div>
+
+</div>
+
+<h2 class="heading">Today's Summary</h2>
+
+<table class="summary-table">
+
+<tr>
+<th>Date</th>
+<th>Sale</th>
+<th>Expense</th>
+<th>Cash</th>
+<th>Customers</th>
+</tr>
+
+<tr>
+<td id="summaryDate">-</td>
+<td id="summarySale">Rs. 0</td>
+<td id="summaryExpense">Rs. 0</td>
+<td id="summaryCash">Rs. 0</td>
+<td id="summaryCustomer">0</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+  </html>
