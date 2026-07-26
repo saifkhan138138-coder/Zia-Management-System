@@ -94,3 +94,69 @@ document.getElementById("cash").value="";
 alert("Form Cleared");
 
 }
+window.onload = function () {
+
+let data = localStorage.getItem("zmsDailyRecord");
+
+if(data){
+
+data = JSON.parse(data);
+
+// Form Restore
+document.getElementById("date").value = data.date || "";
+document.getElementById("staff").value = data.staff || "";
+document.getElementById("timeIn").value = data.timeIn || "";
+document.getElementById("timeOut").value = data.timeOut || "";
+document.getElementById("sale").value = data.sale || "";
+document.getElementById("customer").value = data.customer || "";
+document.getElementById("due").value = data.due || "";
+document.getElementById("food").value = data.food || "";
+document.getElementById("maintenance").value = data.maintenance || "";
+document.getElementById("fuel").value = data.fuel || "";
+document.getElementById("electricity").value = data.electricity || "";
+document.getElementById("salary").value = data.salary || "";
+document.getElementById("rent").value = data.rent || "";
+document.getElementById("other").value = data.other || "";
+document.getElementById("cash").value = data.cash || "";
+
+// Cards Restore
+let expense =
+Number(data.food||0)+
+Number(data.maintenance||0)+
+Number(data.fuel||0)+
+Number(data.electricity||0)+
+Number(data.salary||0)+
+Number(data.rent||0)+
+Number(data.other||0);
+
+document.getElementById("saleCard").innerHTML =
+"Rs. " + data.sale;
+
+document.getElementById("expenseCard").innerHTML =
+"Rs. " + expense;
+
+document.getElementById("cashCard").innerHTML =
+"Rs. " + data.cash;
+
+document.getElementById("customerCard").innerHTML =
+data.customer ? "1" : "0";
+
+// Summary Restore
+document.getElementById("summaryDate").innerHTML =
+data.date || "-";
+
+document.getElementById("summarySale").innerHTML =
+"Rs. " + data.sale;
+
+document.getElementById("summaryExpense").innerHTML =
+"Rs. " + expense;
+
+document.getElementById("summaryCash").innerHTML =
+"Rs. " + data.cash;
+
+document.getElementById("summaryCustomer").innerHTML =
+data.customer ? "1" : "0";
+
+}
+
+};
