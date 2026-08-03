@@ -182,3 +182,20 @@ body{
 #saveAttendance:hover{
     background:#0b6d3b;
 }
+.report-box{
+    background:#f4f7f9;
+    margin-bottom:15px;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.report-box h3{
+    color:#0f8b4c;
+    margin-bottom:10px;
+}
+
+.report-box p{
+    font-size:24px;
+    font-weight:bold;
+}
