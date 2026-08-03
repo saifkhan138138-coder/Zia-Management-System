@@ -271,3 +271,61 @@ document.getElementById("backupBtn").addEventListener("click", function(){
 
 
 });
+document.getElementById("restoreBtn").addEventListener("click", function(){
+
+    let fileInput = document.getElementById("restoreFile");
+
+    let file = fileInput.files[0];
+
+
+    if(!file){
+
+        alert("Please select backup file");
+
+        return;
+
+    }
+
+
+    let reader = new FileReader();
+
+
+    reader.onload = function(e){
+
+        let data = JSON.parse(e.target.result);
+
+
+        if(data.dailyRecord)
+        localStorage.setItem("zmsRecord", data.dailyRecord);
+
+
+        if(data.attendance)
+        localStorage.setItem("attendanceRecord", data.attendance);
+
+
+        if(data.sale)
+        localStorage.setItem("saleRecord", data.sale);
+
+
+        if(data.expense)
+        localStorage.setItem("expenseRecord", data.expense);
+
+
+        if(data.inventory)
+        localStorage.setItem("inventory", data.inventory);
+
+
+        if(data.salary)
+        localStorage.setItem("salaryRecord", data.salary);
+
+
+        alert("Backup Restored Successfully!");
+
+        location.reload();
+
+    };
+
+
+    reader.readAsText(file);
+
+});
