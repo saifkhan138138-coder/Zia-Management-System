@@ -205,3 +205,34 @@ document.getElementById("saveSalary").addEventListener("click", function () {
     alert("Salary Saved Successfully!");
 
 });
+window.addEventListener("load", function () {
+
+    let salaryData = JSON.parse(localStorage.getItem("salaryRecord"));
+
+    let attendanceData = JSON.parse(localStorage.getItem("attendanceRecord"));
+
+
+    if(salaryData){
+
+        document.getElementById("staffNameReport").innerText =
+        "Staff Name: " + (salaryData.staff || "-");
+
+
+        document.getElementById("staffSalaryReport").innerText =
+        "Salary: Rs. " + (salaryData.salary || 0);
+
+
+        document.getElementById("staffDueReport").innerText =
+        "Due: Rs. " + (salaryData.due || 0);
+
+    }
+
+
+    if(attendanceData){
+
+        document.getElementById("staffAttendanceReport").innerText =
+        "Attendance: " + (attendanceData.status || "-");
+
+    }
+
+});
