@@ -43,3 +43,53 @@ body{
     box-shadow:0 5px 20px rgba(0,0,0,.15);
     text-align:center;
   }
+.card h2{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#0f8b4c;
+}
+
+.card p{
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0f8b4c;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 35px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0b6d3b;
+}
+
+@media (max-width:600px){
+
+.header h1{
+    font-size:26px;
+}
+
+.header p{
+    font-size:16px;
+}
+
+.card{
+    padding:20px;
+}
+
+.card h2{
+    font-size:24px;
+}
+
+.btn{
+    width:100%;
+}
+}
