@@ -329,3 +329,22 @@ document.getElementById("restoreBtn").addEventListener("click", function(){
     reader.readAsText(file);
 
 });
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", function(){
+
+        navigator.serviceWorker.register("service-worker.js")
+        .then(function(){
+
+            console.log("ZMS Service Worker Registered");
+
+        })
+        .catch(function(error){
+
+            console.log("Service Worker Error:", error);
+
+        });
+
+    });
+
+}
