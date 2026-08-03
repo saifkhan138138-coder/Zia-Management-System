@@ -88,3 +88,19 @@ document.getElementById("saveSale").addEventListener("click", function () {
     alert("Sale Saved Successfully!");
 
 });
+document.getElementById("saveExpense").addEventListener("click", function () {
+
+    const expenseRecord = {
+        date: document.getElementById("expenseDate").value,
+        name: document.getElementById("expenseName").value,
+        amount: document.getElementById("expenseAmount").value
+    };
+
+    localStorage.setItem("expenseRecord", JSON.stringify(expenseRecord));
+
+    document.getElementById("expenses").innerText =
+        "Rs. " + (expenseRecord.amount || 0);
+
+    alert("Expense Saved Successfully!");
+
+});
