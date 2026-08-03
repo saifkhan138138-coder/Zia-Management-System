@@ -181,3 +181,27 @@ window.addEventListener("load", function () {
     "Balance: Rs. " + balance;
 
 });
+document.getElementById("saveSalary").addEventListener("click", function () {
+
+    const salaryRecord = {
+
+        staff: document.getElementById("salaryStaff").value,
+
+        salary: document.getElementById("salaryAmount").value,
+
+        paid: document.getElementById("salaryPaid").value,
+
+        due: document.getElementById("salaryDue").value
+
+    };
+
+
+    localStorage.setItem(
+        "salaryRecord",
+        JSON.stringify(salaryRecord)
+    );
+
+
+    alert("Salary Saved Successfully!");
+
+});
