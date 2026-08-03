@@ -93,3 +93,28 @@ body{
     width:100%;
 }
 }
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.box{
+    background:#ffffff;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box h2{
+    color:#0f8b4c;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.box h3{
+    font-size:28px;
+    color:#333;
+}
