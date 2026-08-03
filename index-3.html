@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Zia Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sheet">
+<h1>Zia Management System</h1>
+<h2>Daily Sheet</h2>
+
+<label>Date</label>
+<input type="date" id="date">
+
+<label>Opening Balance</label>
+<input type="number" id="openingBalance" value="0">
+
+<h3>Attendance</h3>
+<table border="1">
+<tr><th>Name</th><th>Time In</th><th>Time Out</th><th>Staff Purchase</th></tr>
+<tr><td><input></td><td><input type="time"></td><td><input type="time"></td><td><input type="number" value="0"></td></tr>
+<tr><td><input></td><td><input type="time"></td><td><input type="time"></td><td><input type="number" value="0"></td></tr>
+<tr><td><input></td><td><input type="time"></td><td><input type="time"></td><td><input type="number" value="0"></td></tr>
+<tr><td><input></td><td><input type="time"></td><td><input type="time"></td><td><input type="number" value="0"></td></tr>
+<tr><td><input></td><td><input type="time"></td><td><input type="time"></td><td><input type="number" value="0"></td></tr>
+</table>
+
+<h3>Inventory</h3>
+<input placeholder="Total Pieces">
+<input placeholder="Sold Pieces">
+<input placeholder="Balance" readonly>
+
+<h3>Expenses</h3>
+<input placeholder="Food">
+<input placeholder="Fuel">
+<input placeholder="Maintenance">
+<input placeholder="Other">
+
+<h3>Accounts</h3>
+<input placeholder="Bank Receiving">
+<input placeholder="Cash In Hand">
+
+<h3>Grand Total</h3>
+<input readonly>
+
+<button>Save</button>
+<button onclick="window.print()">Print</button>
+
+<script src="script.js"></script>
+</div>
+</body>
+</html>
