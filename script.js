@@ -104,3 +104,24 @@ document.getElementById("saveExpense").addEventListener("click", function () {
     alert("Expense Saved Successfully!");
 
 });
+document.getElementById("saveProduct").addEventListener("click", function () {
+
+    const product = {
+        name: document.getElementById("productName").value,
+        qty: document.getElementById("productQty").value,
+        price: document.getElementById("productPrice").value
+    };
+
+    let inventory = JSON.parse(localStorage.getItem("inventory")) || [];
+
+    inventory.push(product);
+
+    localStorage.setItem("inventory", JSON.stringify(inventory));
+
+    alert("Product Saved Successfully!");
+
+    document.getElementById("productName").value = "";
+    document.getElementById("productQty").value = "";
+    document.getElementById("productPrice").value = "";
+
+});
