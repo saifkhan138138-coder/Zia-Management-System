@@ -234,3 +234,32 @@ body{
 }
 
 }
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+@media(max-width:600px){
+
+    .header h1{
+        font-size:24px;
+    }
+
+    .dashboard{
+        grid-template-columns:1fr;
+        padding:15px;
+    }
+
+    .box{
+        width:100%;
+    }
+
+    .form-section{
+        margin:20px 15px;
+        padding:15px;
+    }
+
+    }
