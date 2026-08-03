@@ -199,3 +199,38 @@ body{
     font-size:24px;
     font-weight:bold;
 }
+.sidebar{
+    background:#0f8b4c;
+    padding:20px;
+    margin:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.sidebar h2{
+    color:white;
+    margin-bottom:15px;
+}
+
+.sidebar a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    margin:5px;
+    background:#0b6d3b;
+    border-radius:8px;
+}
+
+.sidebar a:hover{
+    background:#07552d;
+}
+
+@media(max-width:600px){
+
+.sidebar a{
+    display:block;
+    margin:8px 0;
+}
+
+}
