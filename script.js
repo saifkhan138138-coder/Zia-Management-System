@@ -236,3 +236,38 @@ window.addEventListener("load", function () {
     }
 
 });
+document.getElementById("backupBtn").addEventListener("click", function(){
+
+    let backupData = {
+
+        dailyRecord: localStorage.getItem("zmsRecord"),
+
+        attendance: localStorage.getItem("attendanceRecord"),
+
+        sale: localStorage.getItem("saleRecord"),
+
+        expense: localStorage.getItem("expenseRecord"),
+
+        inventory: localStorage.getItem("inventory"),
+
+        salary: localStorage.getItem("salaryRecord")
+
+    };
+
+
+    let file = new Blob(
+        [JSON.stringify(backupData, null, 2)],
+        {type:"application/json"}
+    );
+
+
+    let link = document.createElement("a");
+
+    link.href = URL.createObjectURL(file);
+
+    link.download = "ZMS_Backup.json";
+
+    link.click();
+
+
+});
