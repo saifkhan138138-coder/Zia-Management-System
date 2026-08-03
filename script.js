@@ -57,3 +57,16 @@ window.addEventListener("load", function () {
     document.getElementById("cash").innerText = "Rs. " + (record.cashInHand || 0);
 
 });
+document.getElementById("saveAttendance").addEventListener("click", function () {
+
+    const attendance = {
+        date: document.getElementById("attDate").value,
+        staff: document.getElementById("attStaff").value,
+        status: document.getElementById("attStatus").value
+    };
+
+    localStorage.setItem("attendanceRecord", JSON.stringify(attendance));
+
+    alert("Attendance Saved Successfully!");
+
+});
