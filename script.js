@@ -125,3 +125,31 @@ document.getElementById("saveProduct").addEventListener("click", function () {
     document.getElementById("productPrice").value = "";
 
 });
+window.addEventListener("load", function () {
+
+    let saleData = JSON.parse(localStorage.getItem("saleRecord"));
+    let expenseData = JSON.parse(localStorage.getItem("expenseRecord"));
+
+    let sale = 0;
+    let expense = 0;
+
+    if(saleData){
+        sale = Number(saleData.amount) || 0;
+    }
+
+    if(expenseData){
+        expense = Number(expenseData.amount) || 0;
+    }
+
+    let cashBalance = sale - expense;
+
+    document.getElementById("reportSale").innerText =
+        "Rs. " + sale;
+
+    document.getElementById("reportExpense").innerText =
+        "Rs. " + expense;
+
+    document.getElementById("reportCash").innerText =
+        "Rs. " + cashBalance;
+
+});
