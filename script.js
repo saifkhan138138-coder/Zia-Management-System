@@ -153,3 +153,31 @@ window.addEventListener("load", function () {
         "Rs. " + cashBalance;
 
 });
+window.addEventListener("load", function () {
+
+    let saleData = JSON.parse(localStorage.getItem("saleRecord"));
+    let expenseData = JSON.parse(localStorage.getItem("expenseRecord"));
+
+    let totalSale = 0;
+    let totalExpense = 0;
+
+    if(saleData){
+        totalSale = Number(saleData.amount) || 0;
+    }
+
+    if(expenseData){
+        totalExpense = Number(expenseData.amount) || 0;
+    }
+
+    let balance = totalSale - totalExpense;
+
+    document.getElementById("monthSale").innerText =
+    "Total Sale: Rs. " + totalSale;
+
+    document.getElementById("monthExpense").innerText =
+    "Total Expense: Rs. " + totalExpense;
+
+    document.getElementById("monthCash").innerText =
+    "Balance: Rs. " + balance;
+
+});
