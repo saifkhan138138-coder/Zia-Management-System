@@ -70,3 +70,21 @@ document.getElementById("saveAttendance").addEventListener("click", function () 
     alert("Attendance Saved Successfully!");
 
 });
+document.getElementById("saveSale").addEventListener("click", function () {
+
+    const saleRecord = {
+        date: document.getElementById("saleDate").value,
+        customer: document.getElementById("saleCustomer").value,
+        amount: document.getElementById("saleAmount").value,
+        received: document.getElementById("saleReceived").value,
+        due: document.getElementById("saleDue").value
+    };
+
+    localStorage.setItem("saleRecord", JSON.stringify(saleRecord));
+
+    document.getElementById("todaySale").innerText =
+        "Rs. " + (saleRecord.amount || 0);
+
+    alert("Sale Saved Successfully!");
+
+});
