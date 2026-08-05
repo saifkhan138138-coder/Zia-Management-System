@@ -526,7 +526,36 @@ Print Sheet
 
 function saveRecord(){
 
-alert("Record Saved Successfully");
+const inputs = document.querySelectorAll("input");
+const data = [];
+
+inputs.forEach(function(input){
+    data.push(input.value);
+});
+
+localStorage.setItem("ziaDailySheet", JSON.stringify(data));
+
+alert("Record Saved Successfully!");
+
+}
+
+window.onload = function(){
+
+const saved = JSON.parse(localStorage.getItem("ziaDailySheet"));
+
+if(saved){
+
+const inputs = document.querySelectorAll("input");
+
+saved.forEach(function(value,index){
+
+if(inputs[index]){
+inputs[index].value = value;
+}
+
+});
+
+}
 
 }
 
