@@ -588,6 +588,26 @@ input.value="";
 }
 
   }
+  function calculateSummary(){
+
+let opening = Number(document.getElementById("openingBalance").value) || 0;
+
+let sale = Number(document.getElementById("dailySale").value) || 0;
+
+let expense = Number(document.getElementById("totalExpense").value) || 0;
+
+
+let total = opening + sale;
+
+let cash = total - expense;
+
+
+document.getElementById("cashInHand").value = cash;
+
+document.getElementById("grandTotal").value = total;
+
+
+  }
 </script>
 
 </div>
