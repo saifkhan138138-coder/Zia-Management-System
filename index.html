@@ -547,6 +547,11 @@ const dateInput = document.querySelector('input[type="date"]');
 dateInput.value = new Date().toISOString().split("T")[0];
 window.onload = function(){
 
+// آج کی تاریخ خودکار
+const dateInput = document.querySelector('input[type="date"]');
+dateInput.value = new Date().toISOString().split("T")[0];
+
+// محفوظ شدہ ریکارڈ لوڈ کریں
 const saved = JSON.parse(localStorage.getItem("ziaDailySheet"));
 
 if(saved){
