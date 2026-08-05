@@ -542,7 +542,9 @@ localStorage.setItem("ziaDailySheet", JSON.stringify(data));
 alert("Record Saved Successfully!");
 
 }
+const dateInput = document.querySelector('input[type="date"]');
 
+dateInput.value = new Date().toISOString().split("T")[0];
 window.onload = function(){
 
 const saved = JSON.parse(localStorage.getItem("ziaDailySheet"));
