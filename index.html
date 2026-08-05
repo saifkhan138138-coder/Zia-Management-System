@@ -179,10 +179,16 @@ BLOCK NO 3 SILLANWALI
 
 <span>Opening Balance</span>
 
-<input type="number">
+<input id="openingBalance" type="number" oninput="calculateSummary()">
 
 </div>
+<div class="infoBox">
 
+<span>Daily Sale</span>
+
+<input id="dailySale" type="number" oninput="calculateSummary()">
+
+</div>
 </div>
 
 <div class="sectionHeading">
@@ -492,15 +498,13 @@ INVENTORY DETAILS
 <br>
 
 <table>
-
 <tr>
 <td><b>Cash In Hand</b></td>
-<td><input class="number" type="number"></td>
-</tr>
+<td><input id="cashInHand" class="number" type="number" readonly></td>
 
 <tr>
 <td><b>Grand Total</b></td>
-<td><input class="number" type="number"></td>
+<td><input id="grandTotal" class="number" type="number" readonly></td>
 </tr>
 
 <tr>
