@@ -560,11 +560,27 @@ inputs[index].value = value;
 }
 
 }
+function newDay(){
 
+if(confirm("Start New Day?")){
+
+localStorage.removeItem("ziaDailySheet");
+
+const inputs=document.querySelectorAll("input");
+
+inputs.forEach(function(input){
+
+input.value="";
+
+});
+
+}
+
+  }
 </script>
 
 </div>
 
 </body>
 
-      </html>                                    </table>
+      </html>                                    
